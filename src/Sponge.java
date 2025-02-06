@@ -33,6 +33,11 @@ public class Sponge {
 
   // Implement your solution here!
   public static String spongeCase(String sentence) {
+    StringBuilder result = new StringBuilder();
+
+    for (int i = 0; i < words.length; i++) {
+
+      char[] letters = words[i].toCharArray();
     return null;
   }
 
