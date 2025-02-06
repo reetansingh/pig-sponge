@@ -38,6 +38,17 @@ public class Sponge {
     for (int i = 0; i < words.length; i++) {
 
       char[] letters = words[i].toCharArray();
+      for (int i = 0; i < words.length; i++) {
+        char[] letters = words[i].toCharArray();
+  
+        for (int j = 0; j < letters.length; j++) {
+         
+          if (j % 2 == 0) {
+            letters[j] = Character.toLowerCase(letters[j]);
+          } else {
+            letters[j] = Character.toUpperCase(letters[j]);
+          }
+        }
     return null;
   }
 
