@@ -33,24 +33,32 @@ public class Sponge {
 
   // Implement your solution here!
   public static String spongeCase(String sentence) {
+    String[] words = sentence.split(" ");
     StringBuilder result = new StringBuilder();
 
     for (int i = 0; i < words.length; i++) {
-
       char[] letters = words[i].toCharArray();
-      for (int i = 0; i < words.length; i++) {
-        char[] letters = words[i].toCharArray();
-  
-        for (int j = 0; j < letters.length; j++) {
-         
-          if (j % 2 == 0) {
-            letters[j] = Character.toLowerCase(letters[j]);
-          } else {
-            letters[j] = Character.toUpperCase(letters[j]);
-          }
+
+      for (int j = 0; j < letters.length; j++) {
+        if (j % 2 == 0) {
+          letters[j] = Character.toLowerCase(letters[j]);
+        } else {
+          letters[j] = Character.toUpperCase(letters[j]);
         }
-    return null;
+      }
+
+      String transformedWord = new String(letters);
+
+      result.append(transformedWord);
+
+      if (i < words.length - 1) {
+        result.append(" ");
+      }
+    }
+
+    return result.toString();
   }
+  
 
 
   // Method to help with testing, you do not need to read this.
